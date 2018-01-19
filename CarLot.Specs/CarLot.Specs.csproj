@@ -1,0 +1,306 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9083D41A-1362-475A-9C15-523C60CE7D6B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CarLot.Specs</RootNamespace>
+    <AssemblyName>CarLot.Specs</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <ReferencePath>$(ProgramFiles)\Common Files\microsoft shared\VSTT\$(VisualStudioVersion)\UITestExtensionPackages</ReferencePath>
+    <IsCodedUITest>False</IsCodedUITest>
+    <TestProjectType>UnitTest</TestProjectType>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="nunit.framework, Version=3.0.5797.27534, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\NUnit.3.0.0\lib\net45\nunit.framework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="TechTalk.SpecFlow, Version=2.1.0.0, Culture=neutral, PublicKeyToken=0778194805d6db41, processorArchitecture=MSIL">
+      <HintPath>..\packages\SpecFlow.2.1.0\lib\net45\TechTalk.SpecFlow.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="xunit.abstractions, Version=2.0.0.0, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
+      <HintPath>..\packages\xunit.abstractions.2.0.0\lib\net35\xunit.abstractions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="xunit.core, Version=2.1.0.3179, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
+      <HintPath>..\packages\xunit.extensibility.core.2.1.0\lib\dotnet\xunit.core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="xunit.execution.desktop, Version=2.1.0.3179, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
+      <HintPath>..\packages\xunit.extensibility.execution.2.1.0\lib\net45\xunit.execution.desktop.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <Choose>
+    <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+      </ItemGroup>
+    </When>
+    <Otherwise>
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework" />
+      </ItemGroup>
+    </Otherwise>
+  </Choose>
+  <ItemGroup>
+    <Compile Include="ACarGoesZoomWhenDriving.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ACarGoesZoomWhenDriving.feature</DependentUpon>
+    </Compile>
+    <Compile Include="ACarGoesZoomWhenDrivingSteps.cs" />
+    <Compile Include="CarDefaults.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CarDefaults.feature</DependentUpon>
+    </Compile>
+    <Compile Include="CarDefaultsSteps.cs" />
+    <Compile Include="CarLotMax.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CarLotMax.feature</DependentUpon>
+    </Compile>
+    <Compile Include="CarLotMaxSteps.cs" />
+    <Compile Include="CarsGoBeepWhenHonking.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CarsGoBeepWhenHonking.feature</DependentUpon>
+    </Compile>
+    <Compile Include="CarsGoBeepWhenHonkingSteps.cs" />
+    <Compile Include="CarsMustUseTheCorrectFuel.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CarsMustUseTheCorrectFuel.feature</DependentUpon>
+    </Compile>
+    <Compile Include="CarsMustUseTheCorrectFuelSteps.cs" />
+    <Compile Include="CarType.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CarType.feature</DependentUpon>
+    </Compile>
+    <Compile Include="CarTypeSteps.cs" />
+    <Compile Include="DifferentCarsTakeDifferentFuels.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DifferentCarsTakeDifferentFuels.feature</DependentUpon>
+    </Compile>
+    <Compile Include="DifferentCarsTakeDifferentFuelsSteps.cs" />
+    <Compile Include="EachCarCanFuelUpGoOnSaleAndHonk.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EachCarCanFuelUpGoOnSaleAndHonk.feature</DependentUpon>
+    </Compile>
+    <Compile Include="EachCarCanFuelUpGoOnSaleAndHonkSteps.cs" />
+    <Compile Include="EachCarHasAnIntegerValueForFuelLevel.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EachCarHasAnIntegerValueForFuelLevel.feature</DependentUpon>
+    </Compile>
+    <Compile Include="EachCarHasAnIntegerValueForFuelLevelSteps.cs" />
+    <Compile Include="EachCarHasAnIntegerValueForItsPrice.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EachCarHasAnIntegerValueForItsPrice.feature</DependentUpon>
+    </Compile>
+    <Compile Include="EachCarHasAnIntegerValueForItsPriceSteps.cs" />
+    <Compile Include="FunnyCar.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FunnyCar.feature</DependentUpon>
+    </Compile>
+    <Compile Include="FunnyCarSteps.cs" />
+    <Compile Include="HybridEngineUsesTwoLessFuelUnits.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HybridEngineUsesTwoLessFuelUnits.feature</DependentUpon>
+    </Compile>
+    <Compile Include="HybridEngineUsesTwoLessFuelUnitsSteps.cs" />
+    <Compile Include="InventoryReportContainsTotalFuelTypeFuelLevelAndPrice.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InventoryReportContainsTotalFuelTypeFuelLevelAndPrice.feature</DependentUpon>
+    </Compile>
+    <Compile Include="InventoryReportContainsTotalFuelTypeFuelLevelAndPriceSteps.cs" />
+    <Compile Include="Pinto.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Pinto.feature</DependentUpon>
+    </Compile>
+    <Compile Include="PintoSteps.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SemiTruck.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SemiTruck.feature</DependentUpon>
+    </Compile>
+    <Compile Include="SemiTruckSteps.cs" />
+    <Compile Include="SomeCarsHaveAHybridEngine.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SomeCarsHaveAHybridEngine.feature</DependentUpon>
+    </Compile>
+    <Compile Include="SomeCarsHaveAHybridEngineSteps.cs" />
+    <Compile Include="TheLotContainsCars.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TheLotContainsCars.feature</DependentUpon>
+    </Compile>
+    <Compile Include="TheLotContainsCarsSteps.cs" />
+    <Compile Include="ThreeFuelsAreAvailable.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ThreeFuelsAreAvailable.feature</DependentUpon>
+    </Compile>
+    <Compile Include="ThreeFuelsAreAvailableSteps.cs" />
+    <Compile Include="WhenCarIsDrivenWithoutEnoughFuel.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WhenCarIsDrivenWithoutEnoughFuel.feature</DependentUpon>
+    </Compile>
+    <Compile Include="WhenCarIsDrivenWithoutEnoughFuelSteps.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ACarGoesZoomWhenDriving.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>ACarGoesZoomWhenDriving.feature.cs</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+    <None Include="CarDefaults.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>CarDefaults.feature.cs</LastGenOutput>
+    </None>
+    <None Include="CarLotMax.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>CarLotMax.feature.cs</LastGenOutput>
+    </None>
+    <None Include="CarsGoBeepWhenHonking.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>CarsGoBeepWhenHonking.feature.cs</LastGenOutput>
+    </None>
+    <None Include="CarsMustUseTheCorrectFuel.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>CarsMustUseTheCorrectFuel.feature.cs</LastGenOutput>
+    </None>
+    <None Include="CarType.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>CarType.feature.cs</LastGenOutput>
+    </None>
+    <None Include="DifferentCarsTakeDifferentFuels.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>DifferentCarsTakeDifferentFuels.feature.cs</LastGenOutput>
+    </None>
+    <None Include="EachCarCanFuelUpGoOnSaleAndHonk.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>EachCarCanFuelUpGoOnSaleAndHonk.feature.cs</LastGenOutput>
+    </None>
+    <None Include="EachCarHasAnIntegerValueForFuelLevel.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>EachCarHasAnIntegerValueForFuelLevel.feature.cs</LastGenOutput>
+    </None>
+    <None Include="EachCarHasAnIntegerValueForItsPrice.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>EachCarHasAnIntegerValueForItsPrice.feature.cs</LastGenOutput>
+    </None>
+    <None Include="FunnyCar.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>FunnyCar.feature.cs</LastGenOutput>
+    </None>
+    <None Include="HybridEngineUsesTwoLessFuelUnits.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>HybridEngineUsesTwoLessFuelUnits.feature.cs</LastGenOutput>
+    </None>
+    <None Include="InventoryReportContainsTotalFuelTypeFuelLevelAndPrice.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>InventoryReportContainsTotalFuelTypeFuelLevelAndPrice.feature.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Pinto.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>Pinto.feature.cs</LastGenOutput>
+    </None>
+    <None Include="SemiTruck.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>SemiTruck.feature.cs</LastGenOutput>
+    </None>
+    <None Include="SomeCarsHaveAHybridEngine.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>SomeCarsHaveAHybridEngine.feature.cs</LastGenOutput>
+    </None>
+    <None Include="TheLotContainsCars.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>TheLotContainsCars.feature.cs</LastGenOutput>
+    </None>
+    <None Include="ThreeFuelsAreAvailable.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>ThreeFuelsAreAvailable.feature.cs</LastGenOutput>
+    </None>
+    <None Include="WhenCarIsDrivenWithoutEnoughFuel.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>WhenCarIsDrivenWithoutEnoughFuel.feature.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CarLot\CarLot.csproj">
+      <Project>{2ac06fd1-4f48-4a8d-bc1a-3c59086c6ab7}</Project>
+      <Name>CarLot</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Choose>
+    <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Extension, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITesting, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+      </ItemGroup>
+    </When>
+  </Choose>
+  <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
